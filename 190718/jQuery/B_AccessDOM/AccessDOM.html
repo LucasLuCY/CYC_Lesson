@@ -7,14 +7,30 @@
         $(document).ready(function () {
             $("#btnTry").click(function () {
                 // 在這裏寫程式
-                
+                // $("#report").text("line1<br>Line2");
+                // $("#report").html("line1<br>Line2");
+                // $("#report").append("line1<br>Line2"); //附加->無限增值
 
+                // var s = $("#report").text();
+				        // alert(s);
 
-                
+                // var s = $("#aTextField").attr("value");
+                // $("#report").append(s);
 
-                
-                
-                
+                // var s = $("#aTextField").prop("value");
+                // $("#report").append(s);
+
+                // var s = $("#aTextField").attr("value", "Hello!");
+                // $("#report").append(s);
+
+                // var s = $("#aTextField").prop("value", "Hello!");
+                // $("#report").append(s);
+
+                // var s = $("input[name='radioGroup']").eq(2).attr("checked", "checked"); //equal 等於
+                // $("#report").append("radio C selected.");
+
+                // var s = $("input[name='radioGroup']").eq(2).prop("checked", "checked"); 
+                // $("#report").append("radio C selected.");
             })
         });
     </script>
@@ -28,7 +44,7 @@
 
 <form action="" method="put" onsubmit="return false;">
   <div>
-    <label>Text:</label> <input type="text" id="aTextField" name="someTextField"/>
+    <label>Text:</label> <input type="text" id="aTextField" value="ABC" name="someTextField"/>
   </div>
   <div>
     <label>Radio group:</label>

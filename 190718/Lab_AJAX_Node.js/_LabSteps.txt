@@ -1,3 +1,4 @@
+//取用 更新檔 vuejs\Lab_AJAX_Node.js
 Lab: 練習使用 jQuery 的 AJAX 功能
 
 
@@ -22,6 +23,10 @@ exit
 
 1.2	找出本資料夾的 app.js，點兩下以開啟檔案，
 	然後，點按功能表的「> Run」按鈕。
+    
+    在 C:\Lab\CYC_Lesson\190718\Lab_AJAX_Node.js 目錄終端機下輸入 node app.js
+    修改 app.js LINE:18 為 app.listen(80);
+                LINE:22 為 console.log("點按「Ctrl + C」按鈕可結束伺服器程式.");
 
 	<Note>
 	請留意螢幕下方藍色區域，第一行應該類似

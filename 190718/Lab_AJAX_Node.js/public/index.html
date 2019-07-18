@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Lab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <style>
         .task-description,
         .list-group {
@@ -114,8 +114,8 @@
     </div>
 
 
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script type='text/javascript' src='js/ajax_concept.js'></script>
 
     <script>
@@ -127,12 +127,18 @@
 
             $("#getButton").on("click", function() {
                 var s = $("#nameTextBox").val();
+                
+                //跨域
+                // $.get("http://10.0.105.88/hello/" + s, function(response){
+                //     $("#reportSpan").text(response);
+                // })
 
+                //Localhost
+                $.get("http://127.0.0.1/hello/" + s, function(response){
+                    $("#reportSpan").text(response);
+                })
 
-
-
-
-                $("#reportSpan").text(s);
+                // $("#reportSpan").text(s);
             })
 
 
@@ -143,10 +149,27 @@
                     lastName: $("#lastNameTextBox").val()
                 }
 
+                // $.ajax({
+                //     type: "post",
+                //     url:  "http://10.0.105.88/test",
+                //     contentType: "application/json",
+                //     data: JSON.stringify(dataToServer),
+                //     success: function(e){
+                //         $("#resultSpan").text(e);
+                //     }
+                // })
 
+                $.ajax({
+                    type: "post",
+                    url:  "http://127.0.0.1/test",
+                    contentType: "application/json",
+                    data: JSON.stringify(dataToServer),
+                    success: function(e){
+                        $("#resultSpan").text(e);
+                    }
+                })
 
-
-                $("#resultSpan").text(JSON.stringify(dataToServer));
+                // $("#resultSpan").text(JSON.stringify(dataToServer));
             })
 
 
