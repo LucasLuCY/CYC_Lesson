@@ -159,14 +159,24 @@
                 //     }
                 // })
 
+                // $.ajax({
+                //     type: "post",
+                //     url:  "http://127.0.0.1/test",
+                //     contentType: "application/json",    //選擇資料型態
+                //     data: JSON.stringify(dataToServer),
+                //     success: function(e){
+                //         $("#resultSpan").text(e);
+                //     }
+                // })
+
+                //other code style
                 $.ajax({
                     type: "post",
                     url:  "http://127.0.0.1/test",
                     contentType: "application/json",
                     data: JSON.stringify(dataToServer),
-                    success: function(e){
-                        $("#resultSpan").text(e);
-                    }
+                }).then(function(e){
+                    $("#resultSpan").text(e);
                 })
 
                 // $("#resultSpan").text(JSON.stringify(dataToServer));

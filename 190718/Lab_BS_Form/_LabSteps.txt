@@ -12,8 +12,6 @@ Lab -- Bootstrap 之表單版型
 		- https://github.com/kamranahmedse/jquery-toast-plugin
 
 
-
-
 2.	應用 Bootstrap 表單
 
 2.1	找到 <!-- HTML 內容放這邊 -->，置入下列內容:
